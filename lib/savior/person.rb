@@ -3,13 +3,12 @@ module Savior
     attr_reader :age_death, :year_death
 
     def initialize(age_death, year_death)
-      @age_death = age_death
-      @year_death = year_death
+      @age_death = age_death.to_i
+      @year_death = year_death.to_i
     end
 
     def year_coming
       year = year_death - age_death
-      return -1 if year.negative? || age_death.negative? || age_death.negative?
       return year
     end
 

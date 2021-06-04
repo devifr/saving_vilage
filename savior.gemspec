@@ -1,11 +1,11 @@
 
-lib = File.expand_path("savior", __FILE__)
+lib = File.expand_path("lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "savior/version"
+# require "savior/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "savior"
-  spec.version       = Savior::VERSION
+  spec.version       = 1
   spec.authors       = ["Devi Firdaus Fauzi"]
   spec.email         = ["dfedogawa3@gmail.com"]
 
@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["savior"]
+  spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
